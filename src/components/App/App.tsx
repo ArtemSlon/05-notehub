@@ -24,6 +24,7 @@ const { data, isLoading, isError } = useQuery({
     fetchNotes({
       page,
       perPage,
+      search,
     }),
 });
   
@@ -81,7 +82,7 @@ if (isLoading) {
     onPageChange={handlePageChange}
   />
 )}
-          {<button onClick={() => setIsModalOpen(true)} className={css.button }>Create note +</button>}
+          {<button type='button' onClick={() => setIsModalOpen(true)} className={css.button }>Create note +</button>}
         </header>
       </div>
       {data && data.notes.length > 0 && (
