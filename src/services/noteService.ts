@@ -2,9 +2,6 @@ import type { Note } from "../types/note";
 import axios from "axios";
 export interface FetchNotesResponse {
     notes: Note[];
-    page: number;
-    perPage: number;
-    totalItems: number;
     totalPages: number;
 }
 
